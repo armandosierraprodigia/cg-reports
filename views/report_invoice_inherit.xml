@@ -28,12 +28,12 @@
                 <thead>
                     <tr>
                         <th>Partida</th>
-                        <th>Description</th>
-                        <th class="text-right">Quantity</th>
-                        <th class="text-right">Unit Price</th>
+                        <th>Descripción</th>
+                        <th class="text-right">Cantidad</th>
+                        <th class="text-right">PRecio Unitario</th>
                         <th t-if="display_discount" 
-                            class="text-right">Disc.(%)</th>
-                        <th class="text-right">Amount</th>
+                            class="text-right">Desc.(%)</th>
+                        <th class="text-right">Monto</th>
                     </tr>
                 </thead>
                 <tbody class="invoice_tbody">
