@@ -1,32 +1,31 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "extra-addons/cd-reports",
+    'name': "Reportes CG",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Modificaciones a los repotes de presupuestos, solicitud de presupuestos, facturas""",
 
     'description': """
-        Long description of module's purpose
+        Modificación de los reportes agregando nuevas columnas y totales a los reportes
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Prodigia",
+    'website': "http://www.prodigia.mx",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/11.0/odoo/addons/base/module/module_data.xml
     # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+    'category': 'Sales',
+    'version': '1.0.2',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
 
     # always loaded
-    'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+    'data': [        # 'security/ir.model.access.csv',
+        'views/report_invoice_inherit.xml',
+        'views/report_purchasequotation_document.xml',
+        'views/report_saleorder_document.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
