@@ -17,13 +17,13 @@
             </div>
             <div class="col-xs-5 col-xs-offset-1">
                 <t t-if="doc.partner_shipping_id == doc.partner_invoice_id and doc.partner_invoice_id != doc.partner_id or doc.partner_shipping_id != doc.partner_invoice_id">
-                    <strong t-if="doc.partner_shipping_id == doc.partner_invoice_id">Invoicing and shipping address:</strong>
-                    <strong t-if="doc.partner_shipping_id != doc.partner_invoice_id">Invoicing address:</strong>
+                    <strong t-if="doc.partner_shipping_id == doc.partner_invoice_id">Dirección de Envío y Facturación:</strong>
+                    <strong t-if="doc.partner_shipping_id != doc.partner_invoice_id">Dirección de Facturación:</strong>
                     <div t-field="doc.partner_invoice_id" 
                         t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
                     <div t-if="doc.partner_shipping_id != doc.partner_invoice_id" 
                         class="mt8">
-                        <strong>Shipping address:</strong>
+                        <strong>Dirección de Envío:</strong>
                         <div t-field="doc.partner_shipping_id" 
                             t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
                     </div>
@@ -38,27 +38,27 @@
     <xpath expr="//div[@id='informations']" position="replace">
        <div class="row mt32 mb32" id="informations">
                 <div t-if="doc.client_order_ref" class="col-xs-3">
-                    <strong>Your Reference:</strong>
+                    <strong>Referencia:</strong>
                     <p t-field="doc.client_order_ref"/>
                 </div>
                 <div t-if="doc.confirmation_date and doc.state not in ['draft','sent']" class="col-xs-3">
-                    <strong>Date Ordered:</strong>
+                    <strong>Fecha de Orden:</strong>
                     <p t-field="doc.confirmation_date" t-field-options='{"format": "dd/MMM/yyyy"}'/>
                 </div>
                 <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-xs-3">
-                    <strong>Quotation Date:</strong>
+                    <strong>Fecha de Cotización:</strong>
                     <p t-field="doc.date_order" t-field-options='{"format": "dd/MMM/yyyy"}'/>
                 </div>
                 <div t-if="doc.user_id.name" class="col-xs-3">
-                    <strong>Salesperson:</strong>
+                    <strong>Vendedor:</strong>
                     <p t-field="doc.user_id"/>
                 </div>
                 <div name="payment_term" t-if="doc.payment_term_id" class="col-xs-3">
-                    <strong>Payment Terms:</strong>
+                    <strong>Terminos de Pago:</strong>
                     <p t-field="doc.payment_term_id"/>
                 </div>
                 <div t-if="doc.validity_date and doc.state in ['draft', 'sent']" class="col-xs-3">
-                    <strong>Expiration Date:</strong>
+                    <strong>Fecha de Vencimiento:</strong>
                     <p t-field="doc.validity_date" t-field-options='{"format": "dd/MMM/yyyy"}'/>
                 </div>
             </div>
@@ -72,18 +72,18 @@
             <thead>
                 <tr>
                     <th>Partida</th>
-                    <th class="text-right">Quantity</th>
-                    <th>No. Item</th>
-                    <th>Description</th>
+                    <th class="text-right">Cantidad</th>
+                    <th>No. Articulo</th>
+                    <th>Descripción</th>
                     <th t-if="display_discount" 
                         class="text-right" 
-                        groups="sale.group_discount_per_so_line">Disc.(%)</th>
-                    <th class="text-right">Unit Price</th>
+                        groups="sale.group_discount_per_so_line">Desc.(%)</th>
+                    <th class="text-right">Precio Unitario</th>
                     
                     <th class="text-right" 
-                        groups="sale.group_show_price_subtotal">Amount</th>
+                        groups="sale.group_show_price_subtotal">Monto</th>
                     <th class="text-right price_tax_included" 
-                        groups="sale.group_show_price_total">Total Price</th>
+                        groups="sale.group_show_price_total">Precio Total</th>
                       
                     <th>Tiempo de Entrega</th>
                 </tr>
@@ -169,10 +169,7 @@
                 </t>
             </tbody>
         </table>
-
     </xpath>
-
-
 
     <xpath expr="//div[@class='col-xs-4 pull-right']" position="replace">
         <div class="col-xs-4 pull-right">
@@ -211,7 +208,7 @@
                     </td>
                 </tr>
                 <tr class="border-black">
-                    <td><strong>Currency</strong></td>
+                    <td><strong>Moneda</strong></td>
                     <td class="text-right">
                         <span t-field="doc.currency_id.name" />
                     </td>

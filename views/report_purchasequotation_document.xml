@@ -17,7 +17,7 @@
                     </p>
                 </div>
                 <div class="col-xs-5 col-xs-offset-1">
-                    <strong>Shipping address:</strong>
+                    <strong>Dirección de Envío:</strong>
                     <div t-if="o.dest_address_id">
                         <div t-field="o.dest_address_id" 
                             t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
@@ -51,7 +51,7 @@
                 <div class="col-xs-6">
                     <div t-if="o.date_order" 
                         class="col-xs-3">
-                        <strong>Order Date:</strong>
+                        <strong>Fecha de Orden:</strong>
                         <p t-field="o.date_order" 
                             t-field-options='{"format": "dd/MMM/yyyy"}'/>
                     </div>
@@ -69,14 +69,14 @@
                 <thead>
                     <tr>
                         <th>Partida</th>
-                        <th>Qty.</th>
-                        <th>Unit</th>
-                        <th>No. Item</th>
-                        <th>Description</th>
+                        <th>Cantidad.</th>
+                        <th>Unidad</th>
+                        <th>No. Articulo</th>
+                        <th>Descripción</th>
                         <th>Fecha Entrega</th>
                         <th>Etiqueta Analitica</th>
-                        <th class="text-right">Unit Price</th>
-                        <th class="text-right">Amount</th>
+                        <th class="text-right">Precio Unitario</th>
+                        <th class="text-right">Monto</th>
                     </tr>
                 </thead>
                 <tbody class="invoice_tbody">
@@ -143,7 +143,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Taxes</td>
+                            <td>Impuestos</td>
                             <td class="text-right">
                                 <span t-field="o.amount_tax" 
                                     t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
@@ -160,7 +160,7 @@
                         </tr>
                         <tr class="border-black">
                             <td>
-                                <strong>Currency</strong>
+                                <strong>Moneda</strong>
                             </td>
                             <td class="text-right">
                                 <span t-field="o.currency_id.name"/>
