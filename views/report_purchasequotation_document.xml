@@ -209,12 +209,10 @@
                 </div>
             </div>
         </xpath>
-        <!-- <xpath expr="//div[@class='oe_structure']" 
-            position="after">
-            <!-- Add your fields here -->
+        <!-- <xpath expr="//div[@class='oe_structure']" position="after">
+            
             <div style="position:absolute;top:850px; page-break-inside: avoid;">
-                <img src='/cg-reports/static/src/img/Cotiza-CG-2019.jpg' 
-                    style="max-width: 850px" />
+                <img src='/cg-reports/static/src/img/Cotiza-CG-2019.jpg' style="max-width: 850px" />
             </div>
         </xpath> -->
     </template>
