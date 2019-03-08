@@ -57,6 +57,10 @@
                     <strong>Terminos de Pago:</strong>
                     <p t-field="doc.payment_term_id"/>
                 </div>
+                <div name="payment_carrier" t-if="doc.carrier_id" class="col-xs-3">
+                        <strong>Metodo de Envío:</strong>
+                        <p t-field="doc.carrier_id"/>
+                </div>
                 <div t-if="doc.validity_date and doc.state in ['draft', 'sent']" class="col-xs-3">
                     <strong>Fecha de Vencimiento:</strong>
                     <p t-field="doc.validity_date" t-field-options='{"format": "dd/MMM/yyyy"}'/>
@@ -240,5 +244,14 @@
             </div>
         </div>
     </xpath>
+
+    <xpath expr="//div[@class='oe_structure']" 
+            position="after">
+            <!-- Add your fields here -->
+            <div style="position:absolute;top:850px; page-break-inside: avoid;">
+                <img src='/cg-reports/static/src/img/Cotiza-CG-2019.jpg' 
+                    style="max-width: 850px" />
+            </div>
+        </xpath>
 </template>
 </odoo>

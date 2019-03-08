@@ -74,7 +74,7 @@
                         <th>No. Articulo</th>
                         <th>Descripción</th>
                         <th>Fecha Entrega</th>
-                        <th>Etiqueta Analitica</th>
+
                         <th class="text-right">Precio Unitario</th>
                         <th class="text-right">Monto</th>
                     </tr>
@@ -98,15 +98,10 @@
                             <span t-field="l.name"/>
                         </td>
                         <td>
-                            <span t-field="l.date_planned"/>
+                            <span t-field="l.date_planned" 
+                                t-field-options='{"format": "dd/MMM/yyyy"}'/>
                         </td>
-                        <td>
-                            <t t-foreach="l.analytic_tag_ids" 
-                                t-as="tag">
-                                <span t-field="tag.name" />
-,
-                            </t>
-                        </td>
+
                         <td class="text-right">
                             <span t-field="l.price_unit"/>
                         </td>
@@ -214,6 +209,13 @@
                 </div>
             </div>
         </xpath>
+        <!-- <xpath expr="//div[@class='oe_structure']" 
+            position="after">
+            <!-- Add your fields here -->
+            <div style="position:absolute;top:850px; page-break-inside: avoid;">
+                <img src='/cg-reports/static/src/img/Cotiza-CG-2019.jpg' 
+                    style="max-width: 850px" />
+            </div>
+        </xpath> -->
     </template>
-
 </odoo>
