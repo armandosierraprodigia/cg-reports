@@ -36,23 +36,20 @@
                      position="replace">
                      <div class="row" 
                             name="datos_proyecto">
-                            <div class="col-xs-3">
+                            <!-- <div class="col-xs-3">
                                    <strong>Nombre de Proyecto:</strong>
-                                   <p t-foreach="o.order_line.analytic_tag_ids" 
-                                          t-as="tag">
+                                   <p t-foreach="o.order_line.analytic_tag_ids" t-as="tag">
                                           <span t-field="tag.name" />
                                    </p>
                             </div>
                             <div class="col-xs-3">
                                    <strong>Cuenta Analitica:</strong>
-                                   <p t-foreach="o.order_line.account_analytic_id" 
-                                          t-as="account">
+                                   <p t-foreach="o.order_line.account_analytic_id" t-as="account">
                                           <span t-field="account.name" />
                                    </p>
-                            </div>
+                            </div> -->
                             <div class="col-xs-6">
-                                   <div t-if="o.date_order" 
-                                          class="col-xs-3">
+                                   <div t-if="o.date_order">
                                           <strong>Fecha de Orden:</strong>
                                           <p t-field="o.date_order" 
                                                  t-field-options='{"format": "dd/MMM/yyyy"}'/>

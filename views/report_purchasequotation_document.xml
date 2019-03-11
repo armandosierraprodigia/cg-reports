@@ -36,14 +36,14 @@
             <div class="row">
                 <div class="col-xs-3">
                     <strong>Nombre de Proyecto:</strong>
-                    <p t-foreach="o.order_line.analytic_tag_ids" 
+                    <p t-foreach="o.analytic_account_tag_ids" 
                         t-as="tag">
                         <span t-field="tag.name" />
                     </p>
                 </div>
                 <div class="col-xs-3">
                     <strong>Cuenta Analitica:</strong>
-                    <p t-foreach="o.order_line.account_analytic_id" 
+                    <p t-foreach="o.account_analytic_id" 
                         t-as="account">
                         <span t-field="account.name" />
                     </p>
