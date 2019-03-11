@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-xs-3">
                     <strong>Cuenta Analitica:</strong>
-                    <p t-foreach="o.account_analytic_id" 
+                    <p t-foreach="o.analytic_account_id" 
                         t-as="account">
                         <span t-field="account.name" />
                     </p>
