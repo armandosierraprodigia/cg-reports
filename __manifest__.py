@@ -15,11 +15,11 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/11.0/odoo/addons/base/module/module_data.xml
     # for the full list
-    'category': 'Sales',
+    'category': 'Technical Settings',
     'version': '1.0.2',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'purchase', 'sale'],
 
     # always loaded
     'data': [        # 'security/ir.model.access.csv',
